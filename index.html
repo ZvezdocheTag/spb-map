@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="viewport" content="initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+	<meta charset="UTF-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/style.css">
+  
+	
+
+</head>
+<body>
+
+<main class="main-p">
+  <!-- HEADER -->
+  <header class="header clearfix">
+    <div class="header__left">
+      <a class="header__logo" href="#">
+        <img src="images/gerb2.png" height="43" width="35" alt="Логотип Городской программы" class="logo__img">
+        <p class="slogan">Информационный портал застроенных территорий Санкт-Петербурга</p>
+      </a>
+    </div>
+    <div class="header__right">
+      <div class="search__wrapper clearfix">
+         <form action="search" method="get" class="search__form header__form">
+        <input type="text" name="search" placeholder="Проверить дом по адресу">
+        <button class="search__btn header__search--btn">
+          <span class="search__icon"></span>
+        </button>
+      </form>
+      </div>
+
+      <!-- HEADER BURGER BTN -->
+      <button type="button" class="header__nav--mobile tcon tcon-menu--xcross" aria-label="toggle menu">
+        <span class="tcon-menu__lines" aria-hidden="true"></span>
+        <span class="tcon-visuallyhidden">toggle menu</span>
+      </button>
+      <!-- END HEADER BURGER BTN -->
+      <nav class="header__nav">
+        <ul class="nav-list">
+          <li class="nav-list__item"><a href="#" class="nav-list__link">О программе</a></li>
+          <li class="nav-list__item "><a href="#" class="nav-list__link nav-list__link--active">Районы</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Новости</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Электронная приемная</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+     
+  </header>
+  <!-- END HEADER -->
+  <!-- MOBILE NAV MENU -->
+        <nav class="header__nav--mobile-menu" id="mobile-nav">
+        <ul class="nav-list nav-list--mobile">
+          <li class="nav-list__item"><a href="#" class="nav-list__link">О программе</a></li>
+          <li class="nav-list__item "><a href="#" class="nav-list__link nav-list__link--active">Районы</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Новости</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Электронная приемная</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Контакты</a></li>
+        </ul>
+      </nav>
+  <!-- END MOBILE NAV MENU -->
+
+  <!-- MAP NAVIGATION MENU -->
+   <div class="map__nav" >
+     <div class="map-list clearfix">     
+         <p class="map-list__name">Список районов</p>
+       
+          <button type="button" class="map-list__btn tcon tcon-menu--xcross" aria-label="toggle menu">
+            <span class="tcon-menu__lines" aria-hidden="true"></span>
+            <span class="tcon-visuallyhidden">список районов</span>
+          </button>
+       
+     </div>
+   </div>
+
+
+   <div class="district" id="map__nav-btn">
+     <nav class="district__nav">
+       <ul class="district-list clearfix">
+         <li class="district-list__item">
+           <div class="district-list__title">Адмиралтейский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Василеостровский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Выборгский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Калининский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Кировский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Колпинский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Красногвардейский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Красносельский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Кронштадский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Курортный</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Московский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Невский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Петроградский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Петродворцовый</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Приморский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Пушкинский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Фрунзенский</div>
+           <div class="district-list__text"></div>
+         </li>
+         <li class="district-list__item">
+           <div class="district-list__title">Центральный</div>
+           <div class="district-list__text"></div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+
+   <!-- END MAP NAVIGATION MENU -->
+
+   <!-- MAIN MAP -->
+  <div class="map" id="map" >
+  </div>
+  <!-- END MAIN MAP -->
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <h3 class="footer__title">Входит ли мой дом в программу реновации</h3>
+    <div class="footer__search">
+           <form action="search" method="get" class="search__form footer__form clearfix">            
+              <input type="text" name="search" placeholder="Название улицы, номер дома, корпус">
+              <button class="search__btn footer__search--btn">
+                <span class="search__icon"></span>
+              </button>
+              <button type="submit">Найти</button>
+           </form>
+    </div>
+    <div class="footer__list">
+      <ul class="navigation">
+        <li class="navigation__item"> 
+          <ul class="sub-navigation">
+             <li class="sub-navigation__item"><a href="" class="sub-navigation__link"><b>О программе</b></a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link">История</a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link">Преимущества</a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link">Условия</a></li>
+          </ul>
+        </li>
+        <li class="navigation__item">
+         
+          <ul class="sub-navigation">
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"><b>Районы</b></a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"></a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"></a></li>
+          </ul>
+        </li>
+        <li class="navigation__item">
+          
+          <ul class="sub-navigation">
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"><b>Новости</b></a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link">Новости программы</a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link">Новости районов</a></li>
+          </ul>
+        </li>
+        <li class="navigation__item">   
+          <ul class="sub-navigation">
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"><b>Электронная приемная</b></a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"></a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"></a></li>
+          </ul>
+        </li>
+        <li class="navigation__item">       
+          <ul class="sub-navigation">
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"><b> Контакты</b></a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link"> <b>(800) 600-0000</b></a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link">Контакты администраии</a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link">Контакты депараментов</a></li>
+            <li class="sub-navigation__item"><a href="" class="sub-navigation__link">Контакты СПБ Реовация</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__copyright clearfix">     
+      <div class="social">
+        <ul class="social-list">
+          <li class="social-list__item"><a href="" class="social-list__link">Вконтакте</a></li>
+          <li class="social-list__item"><a href="" class="social-list__link">Твитер</a></li>
+          <li class="social-list__item"><a href="" class="social-list__link">Ютуб</a></li>
+        </ul>
+      </div>
+      <div class="copyright">© 2015</div>
+    </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.2.1.3.min.js"><\/script>')</script>
+<script src="js/vendore.js"></script>  
+<script src="js/main.js"></script>	
+
+
+</body>
+</html>
